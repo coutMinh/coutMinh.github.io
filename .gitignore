@@ -1,0 +1,7 @@
+.research/
+.qa/
+__pycache__/
+*.pyc
+/portfolio-upload.zip
+/UPLOAD-TO-GITHUB/
+
