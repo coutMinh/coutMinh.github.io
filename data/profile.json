@@ -5,34 +5,156 @@
   "location": "Ho Chi Minh City, Vietnam",
   "content_updated": "September 2026",
   "links": [
-    {"label": "Email", "url": "mailto:ttqminh2005@gmail.com"},
-    {"label": "Google Scholar", "url": "https://scholar.google.com/citations?user=VfUYwW8AAAAJ&hl=vi"},
-    {"label": "GitHub", "url": "https://github.com/coutMinh"},
-    {"label": "LinkedIn", "url": "https://www.linkedin.com/in/ttqminh"}
+    {
+      "label": "Email",
+      "url": "mailto:ttqminh2005@gmail.com"
+    },
+    {
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=VfUYwW8AAAAJ&hl=vi"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/coutMinh"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/ttqminh"
+    }
   ],
   "education": [
-    {"institution": "University of Science, VNU-HCM", "qualification": "B.Sc. in Artificial Intelligence", "period": "Sep 2023 – Jul 2027 (expected)", "detail": "GPA: 9.41/10 · Rank: 2/56 · Excellent Student for 6 consecutive semesters", "url": "https://hcmus.edu.vn/", "logo": "assets/images/organizations/hcmus.png", "logo_source": "https://oxyzgiahuy.github.io/assets/images/badges/logo_hcmus.png"},
-    {"institution": "Lương Văn Chánh High School for the Gifted", "qualification": "Specialized in Physics", "period": "Tuy Hòa, Phú Yên", "detail": "", "url": "https://www.facebook.com/THPTchuyenLuongVanChanh", "logo": "assets/images/organizations/luong-van-chanh.jpg", "logo_source": "https://www.facebook.com/THPTchuyenLuongVanChanh"}
+    {
+      "institution": "University of Science, VNU-HCM",
+      "qualification": "B.Sc. in Artificial Intelligence",
+      "period": "Sep 2023 – Jul 2027 (expected)",
+      "detail": "GPA: 9.41/10 · Rank: 2/56 · Excellent Student for 6 consecutive semesters",
+      "url": "https://hcmus.edu.vn/",
+      "logo": "assets/images/organizations/hcmus.png",
+      "logo_source": "https://oxyzgiahuy.github.io/assets/images/badges/logo_hcmus.png"
+    },
+    {
+      "institution": "Lương Văn Chánh High School for the Gifted",
+      "qualification": "Specialized in Physics",
+      "period": "Tuy Hòa, Phú Yên",
+      "detail": "",
+      "url": "https://www.facebook.com/THPTchuyenLuongVanChanh",
+      "logo": "assets/images/organizations/luong-van-chanh.jpg",
+      "logo_source": "https://www.facebook.com/THPTchuyenLuongVanChanh"
+    }
   ],
   "teaching": [
-    {"institution": "Summer in Engineering and Applied Sciences (SEAS)", "display_name": "SEAS", "role": "Teaching Assistant", "period": "Jun 2025 – present", "detail": "Under the supervision of Duc Hoang (MIT Ph.D.), I helped teach a two-week program for 40 high school students in Central Vietnam, designed linear algebra exercises in Python, and mentored flood forecasting and local fish identification projects.", "url": "https://seas-cvn.github.io/", "logo": "assets/images/organizations/seas.png", "logo_source": "https://seas-cvn.github.io/images/logo/SEAS_LOGO_Transparent.png"},
-    {"institution": "Science Lab", "role": "Mentor & Competition Judge", "period": "2025 – 2026", "detail": "Mentored a student team at the Software Engineering Summer Hackathon 2025 and judged the AIHACKS Datathon 2026, evaluating methodology, model performance, problem-solving strategy, and presentation.", "url": "https://www.facebook.com/sciencelab.stem/", "logo": "assets/images/organizations/science-lab.jpg", "logo_source": "https://www.facebook.com/sciencelab.stem/"}
+    {
+      "institution": "Summer in Engineering and Applied Sciences (SEAS)",
+      "display_name": "SEAS",
+      "role": "Teaching Assistant",
+      "period": "Jun 2025 – present",
+      "detail": "Under the supervision of Duc Hoang (MIT Ph.D.), I helped teach a two-week program for 40 high school students in Central Vietnam, designed linear algebra exercises in Python, and mentored flood forecasting and local fish identification projects.",
+      "url": "https://seas-cvn.github.io/",
+      "logo": "assets/images/organizations/seas.png",
+      "logo_source": "https://seas-cvn.github.io/images/logo/SEAS_LOGO_Transparent.png"
+    },
+    {
+      "institution": "Science Lab",
+      "role": "Mentor & Competition Judge",
+      "period": "2025 – 2026",
+      "detail": "Mentored a student team at the Software Engineering Summer Hackathon 2025 and judged the AIHACKS Datathon 2026, evaluating methodology, model performance, problem-solving strategy, and presentation.",
+      "url": "https://www.facebook.com/sciencelab.stem/",
+      "logo": "assets/images/organizations/science-lab.jpg",
+      "logo_source": "https://www.facebook.com/sciencelab.stem/"
+    }
   ],
   "honors": [
-    {"id": "hust", "date": "", "title": "First Runner-Up · Project Presentation", "detail": "Agentic AI Summer Camp, HUST · Selected among 50 of 200 research students", "url": "https://drive.google.com/file/d/1itXYpOXt6BcAALYQuu-KByIadfaI55jD/view?usp=sharing"},
-    {"id": "eventa-award", "date": "2025", "title": "Second Prize · EVENTA", "detail": "Event-based Image Retrieval · Team method presented at an ACM Multimedia workshop", "url": "https://drive.google.com/file/d/1z8MmtRewLQCsWDtQ1NjaCOd13DmBsX9x/view?usp=sharing"},
-    {"id": "aquasafe-award", "date": "2025", "title": "Honor Prize · Data4Life Hack for Growth", "detail": "AquaSafe", "url": "https://demo-aqua-safe.vercel.app/"},
-    {"id": "top-2025", "date": "2024–25", "title": "Top 3% · Faculty of Information Technology", "detail": "University of Science, VNU-HCM", "url": "https://drive.google.com/file/d/1HkZ_M2grMYpf5ZDcg1SBkR47N09mgSqj/view?usp=sharing"},
-    {"id": "bosch-award", "date": "2024", "title": "Winner · HCMUS × Bosch AI Innovation Competition", "detail": "AI Assistant Glasses", "url": "https://drive.google.com/file/d/1Hy8HTXubGFQJscxQSfUw8o1ZWrHYeWAo/view?usp=sharing"},
-    {"id": "soict-award", "date": "2024", "title": "Finalist · SOICT Hackathon", "detail": "Real-time Monitoring Surveillance System", "url": "https://drive.google.com/file/d/1TUYt_0WpgNDU5CSSWzGGxtGVSBP0qXFk/view?usp=sharing"},
-    {"id": "aic-award", "date": "2024", "title": "Finalist · Ho Chi Minh City AI Challenge", "detail": "Lifelog Retrieval App", "url": "https://drive.google.com/file/d/1naNgDrA-sWXjYJvOtrae2c_IOOMAGU30/view?usp=sharing"},
-    {"id": "top-2024", "date": "2023–24", "title": "Top 3% · Faculty of Information Technology", "detail": "University of Science, VNU-HCM", "url": "https://drive.google.com/file/d/1lRXQO-MdE4v232L9jSXz664tuBQsgShk/view?usp=sharing"},
-    {"id": "scholarship", "date": "2023–24", "title": "School Scholarship", "detail": "Second semester · University of Science, VNU-HCM"},
-    {"id": "excellent-student", "date": "6 semesters", "title": "Excellent Student", "detail": "Recognized for six consecutive semesters"},
-    {"id": "mentorship-award", "date": "2025", "title": "Recognition for Excellent Mentorship", "detail": "Science Lab · Software Engineering Summer Hackathon", "url": "https://drive.google.com/file/d/1mweKQ_GxDCc6eHpTpWkoUrM54BYkIKE8/view?usp=sharing"}
+    {
+      "id": "hust",
+      "date": "",
+      "title": "First Runner-Up · Project Presentation",
+      "detail": "Agentic AI Summer Camp, HUST · Selected among 50 of 200 research students",
+      "url": "https://drive.google.com/file/d/1itXYpOXt6BcAALYQuu-KByIadfaI55jD/view?usp=sharing",
+      "compact_title": "First Runner-Up · Agentic AI Summer Camp, HUST"
+    },
+    {
+      "id": "eventa-award",
+      "date": "2025",
+      "title": "Second Prize · EVENTA",
+      "detail": "Event-based Image Retrieval · Team method presented at an ACM Multimedia workshop",
+      "url": "https://drive.google.com/file/d/1z8MmtRewLQCsWDtQ1NjaCOd13DmBsX9x/view?usp=sharing"
+    },
+    {
+      "id": "aquasafe-award",
+      "date": "2025",
+      "title": "Honor Prize · Data4Life Hack for Growth",
+      "detail": "AquaSafe",
+      "url": "https://demo-aqua-safe.vercel.app/"
+    },
+    {
+      "id": "top-2025",
+      "date": "2024–25",
+      "title": "Top 3% · Faculty of Information Technology",
+      "detail": "University of Science, VNU-HCM",
+      "url": "https://drive.google.com/file/d/1HkZ_M2grMYpf5ZDcg1SBkR47N09mgSqj/view?usp=sharing"
+    },
+    {
+      "id": "bosch-award",
+      "date": "2024",
+      "title": "Winner · HCMUS × Bosch AI Innovation Competition",
+      "detail": "AI Assistant Glasses",
+      "url": "https://drive.google.com/file/d/1Hy8HTXubGFQJscxQSfUw8o1ZWrHYeWAo/view?usp=sharing"
+    },
+    {
+      "id": "soict-award",
+      "date": "2024",
+      "title": "Finalist · SOICT Hackathon",
+      "detail": "Real-time Monitoring Surveillance System",
+      "url": "https://drive.google.com/file/d/1TUYt_0WpgNDU5CSSWzGGxtGVSBP0qXFk/view?usp=sharing"
+    },
+    {
+      "id": "aic-award",
+      "date": "2024",
+      "title": "Finalist · Ho Chi Minh City AI Challenge",
+      "detail": "Lifelog Retrieval App",
+      "url": "https://drive.google.com/file/d/1naNgDrA-sWXjYJvOtrae2c_IOOMAGU30/view?usp=sharing"
+    },
+    {
+      "id": "top-2024",
+      "date": "2023–24",
+      "title": "Top 3% · Faculty of Information Technology",
+      "detail": "University of Science, VNU-HCM",
+      "url": "https://drive.google.com/file/d/1lRXQO-MdE4v232L9jSXz664tuBQsgShk/view?usp=sharing"
+    },
+    {
+      "id": "scholarship",
+      "date": "2023–24",
+      "title": "School Scholarship",
+      "detail": "Second semester · University of Science, VNU-HCM",
+      "compact_title": "School Scholarship · Second semester"
+    },
+    {
+      "id": "excellent-student",
+      "date": "6 semesters",
+      "title": "Excellent Student",
+      "detail": "Recognized for six consecutive semesters",
+      "compact_title": "Excellent Student · 6 consecutive semesters"
+    },
+    {
+      "id": "mentorship-award",
+      "date": "2025",
+      "title": "Recognition for Excellent Mentorship",
+      "detail": "Science Lab · Software Engineering Summer Hackathon",
+      "url": "https://drive.google.com/file/d/1mweKQ_GxDCc6eHpTpWkoUrM54BYkIKE8/view?usp=sharing",
+      "compact_title": "Excellent Mentorship · Science Lab Summer Hackathon"
+    }
   ],
   "ongoing": [
-    {"title": "When Unlearning Hurts: Adversarial Forgetting in Graph Neural Networks", "description": "Investigating attacks that exploit machine-unlearning procedures to cause persistent degradation across sequential graph-learning tasks.", "supervisors": "Suhang Wang, Tung Kieu, and Cuong Dang Cao", "url": "https://docs.google.com/presentation/d/1CYoRqYZ8aNSpcwDy2aOtfRQtkz9xzAlepxIYVFcuV9E/edit?usp=sharing"},
-    {"title": "Adversarial Attacks on Video-Editing Models", "description": "Investigating adversarial vulnerabilities in video-editing models.", "supervisors": "Thanh Le (Ph.D.)"}
+    {
+      "title": "When Unlearning Hurts: Adversarial Forgetting in Graph Neural Networks",
+      "description": "Investigating attacks that exploit machine-unlearning procedures to cause persistent degradation across sequential graph-learning tasks.",
+      "supervisors": "Suhang Wang, Tung Kieu, and Cuong Dang Cao",
+      "url": "https://docs.google.com/presentation/d/1CYoRqYZ8aNSpcwDy2aOtfRQtkz9xzAlepxIYVFcuV9E/edit?usp=sharing"
+    },
+    {
+      "title": "Adversarial Attacks on Video-Editing Models",
+      "description": "Investigating adversarial vulnerabilities in video-editing models.",
+      "supervisors": "Thanh Le (Ph.D.)"
+    }
   ]
 }

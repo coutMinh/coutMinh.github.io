@@ -38,7 +38,7 @@ def resource_links(project):
 
 
 def figure(project):
-    return f'''<figure class="paper-figure"><a class="figure-link" href="{e(project['image'])}" data-figure-title="{e(project['title'])}" data-credit="{e(project['figure_credit'])}" data-source="{e(project['figure_source'])}" aria-label="Enlarge the original {e(project['title'])} figure"><img src="{e(project['image'])}" alt="{e(project['image_alt'])}" loading="lazy"><span class="figure-enlarge" aria-hidden="true">↗</span></a><figcaption>{external(project['figure_source'], 'Original paper figure ↗')}</figcaption></figure>'''
+    return f'''<figure class="paper-figure"><a class="figure-link" href="{e(project['image'])}" data-figure-title="{e(project['title'])}" data-credit="{e(project['figure_credit'])}" data-source="{e(project['figure_source'])}" aria-label="Enlarge the original {e(project['title'])} figure"><img src="{e(project['image'])}" alt="{e(project['image_alt'])}" loading="lazy"><span class="figure-enlarge" aria-hidden="true">↗</span></a></figure>'''
 
 
 def abstract(project):
@@ -54,10 +54,11 @@ def publication(project, selected=False):
 
 
 def project_card(project):
-    media = figure(project) if project.get('image') else ''
-    category = project['category']
-    manuscript = f'<p class="manuscript-title">{e(project["paper_title"])}</p>' if project.get('paper_title') else ''
-    return f'''<article id="{e(project['id'])}" class="project-card{' has-figure' if media else ''}" data-category="{e(category)}">{media}<div class="project-content"><div class="paper-meta"><span class="status{' accepted' if project['id']=='ai-glasses' else ''}">{e(project['status'])}</span><span class="contribution">{e(project['role'])}</span></div><h2>{e(project['title'])}</h2><p class="project-subtitle">{e(project['subtitle'])}</p><p>{e(project['summary'])}</p>{manuscript}<div class="tags">{''.join(f'<span>{e(tag)}</span>' for tag in project['tags'])}</div>{abstract(project)}<div class="paper-links">{resource_links(project)}</div></div></article>'''
+    media = f'<div class="project-cover"><img src="{e(project["cover"])}" alt="{e(project["cover_alt"])}" width="1536" height="1024" loading="lazy"></div>'
+    role = 'Project mentor · SEAS' if project['category']=='mentored' else 'Team project'
+    date = f'<span class="project-year">{e(project["year"])}</span>' if project.get('year','').isdigit() else ''
+    tags = ''.join(f'<span>{e(tag)}</span>' for tag in project['tags'])
+    return f'''<article id="{e(project['id'])}" class="project-card">{media}<div class="project-content"><div class="project-meta"><span>{e(role)}</span>{date}</div><h2>{e(project['title'])}</h2><p class="project-summary">{e(project['summary'])}</p><p class="project-status">{e(project['status'])}</p>{abstract(project)}<div class="project-card-bottom"><div class="tags">{tags}</div><div class="paper-links">{resource_links(project)}</div></div></div></article>'''
 
 
 def institution_logo(item):
@@ -85,14 +86,11 @@ def teaching():
 def honors():
     rows = []
     for item in profile['honors']:
-        title = external(item['url'], e(item['title']) + ' <span class="award-arrow" aria-hidden="true">↗</span>') if item.get('url') else e(item['title'])
-        date = f'<span class="award-date">{e(item["date"])} · </span>' if item['date'] else ''
-        rows.append(f'<li id="{e(item["id"])}"><span class="award-dot" aria-hidden="true"></span><div><h3>{title}</h3><p>{date}{e(item["detail"])}</p></div></li>')
+        label = e(item.get('compact_title', item['title']))
+        title = external(item['url'], label + ' <span class="award-arrow" aria-hidden="true">↗</span>') if item.get('url') else label
+        date = '' if item['id']=='excellent-student' else e(item['date'])
+        rows.append(f'<li id="{e(item["id"])}" title="{e(item["detail"])}"><span class="award-dot" aria-hidden="true"></span><h3>{title}</h3><span class="award-date">{date}</span></li>')
     return ''.join(rows)
-
-
-def ongoing():
-    return ''.join(f'<article class="ongoing-item"><span class="ongoing-dot" aria-hidden="true"></span><div><h3>{e(item["title"])}</h3><p>{e(item["description"])}</p><p class="supervisors">With {e(item["supervisors"])}</p>{external(item["url"], "Research slides ↗") if item.get("url") else ""}</div></article>' for item in profile['ongoing'])
 
 
 def render():
@@ -101,10 +99,9 @@ def render():
     for item in data['other_projects']:
         link = {'label': 'Live demo' if item['id']=='aquasafe' else 'Code', 'url': item['url']}
         projects.append({**item, 'links': [link]})
-    # Put built systems together, followed by the clearly attributed mentoring work.
     projects.sort(key=lambda p: p['category'] == 'mentored')
     social = ''.join(f'<a href="{e(item["url"])}"' + ('' if item['label']=='Email' else ' target="_blank" rel="noopener"') + f'>{ICONS[item["label"]]}<span>{e(item["label"])}</span></a>' for item in profile['links'])
-    values = {'profile_links': social, 'location_icon': ICONS['location'], 'document_icon': ICONS['document'], 'notebook_icon': ICONS['notebook'], 'selected_publications': ''.join(publication(p, True) for p in research), 'education': education(), 'teaching': teaching(), 'honors': honors(), 'publications': ''.join(publication(p) for p in research), 'ongoing': ongoing(), 'projects': ''.join(project_card(p) for p in projects), 'scholar_url': e(next(p['url'] for p in profile['links'] if p['label']=='Google Scholar'))}
+    values = {'profile_links': social, 'location_icon': ICONS['location'], 'document_icon': ICONS['document'], 'notebook_icon': ICONS['notebook'], 'selected_publications': ''.join(publication(p, True) for p in research), 'education': education(), 'teaching': teaching(), 'honors': honors(), 'publications': ''.join(publication(p) for p in research), 'projects': ''.join(project_card(p) for p in projects)}
     pages = [('Home','index.html','home.html','Undergraduate AI researcher at VNU-HCM. Work in trustworthy AI, retrieval-augmented generation, and Vietnamese language understanding.'), ('Publications','publications.html','publications.html','Publications by Tran Ta Quang Minh on RAG robustness, uncertainty quantification, and Vietnamese dialects.'), ('Blog','blog.html','blog.html','Research notes and writing by Tran Ta Quang Minh.'), ('Projects','projects.html','projects.html','Applied AI projects and mentored student work by Tran Ta Quang Minh.')]
     base = Template((ROOT/'templates/base.html').read_text(encoding='utf-8'))
     for name, filename, template, description in pages:

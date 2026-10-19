@@ -9,7 +9,7 @@
     root.dataset.theme = theme;
     themeButton.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
     themeButton.title = themeButton.getAttribute('aria-label');
-    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#151b25' : '#ffffff';
+    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#111722' : '#f6f7f9';
   }
   setTheme(preferredTheme === 'light' || preferredTheme === 'dark' ? preferredTheme : systemTheme.matches ? 'dark' : 'light');
   themeButton.hidden = false;
@@ -19,20 +19,6 @@
     try { localStorage.setItem('portfolio-theme', preferredTheme); } catch { /* The theme still works. */ }
   });
   systemTheme.addEventListener('change', event => { if (!preferredTheme) setTheme(event.matches ? 'dark' : 'light'); });
-
-  const filters = document.querySelector('.filters');
-  if (filters) {
-    const buttons = [...filters.querySelectorAll('button')];
-    const cards = [...document.querySelectorAll('.project-card')];
-    filters.hidden = false;
-    buttons.forEach(button => button.addEventListener('click', () => {
-      const category = button.dataset.filter;
-      buttons.forEach(other => other.setAttribute('aria-pressed', String(other === button)));
-      cards.forEach(card => { card.hidden = category !== 'all' && card.dataset.category !== category; });
-      const count = cards.filter(card => !card.hidden).length;
-      document.getElementById('filter-status').textContent = `${count} ${category === 'mentored' ? 'mentored ' : ''}projects shown.`;
-    }));
-  }
 
   const dialog = document.getElementById('figure-dialog');
   if (!dialog || typeof dialog.showModal !== 'function') return;

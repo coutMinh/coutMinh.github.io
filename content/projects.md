@@ -173,26 +173,6 @@ Mentored the student team's design of an edge-oriented fish identification appli
 
 These entries use only details documented in the CV. Expand them when team materials are available.
 
-### Lifelog Retrieval App
-
-**Subtitle:** Searching everyday moments in visual archives
-
-**Status:** Finalist · HCMC AI Challenge 2024
-
-A visual retrieval application for finding relevant moments in lifelog collections. Developed as a team project for the Ho Chi Minh City AI Challenge 2024, where the team reached the final round.
-
-[Project](https://github.com/coutMinh/Events-retrieval-AIC_2024-)
-
-### Real-time Monitoring Surveillance System
-
-**Subtitle:** Computer vision for live monitoring
-
-**Status:** Finalist · SOICT Hackathon 2024
-
-A computer-vision project exploring real-time surveillance and monitoring. The team reached the final round of the SOICT Hackathon 2024.
-
-[Project](https://github.com/coutMinh/surveillance_cam)
-
 ### AquaSafe
 
 **Subtitle:** A Data4Life hackathon prototype
@@ -217,6 +197,30 @@ An applied team project developed for Data4Life Hack for Growth 2025 and recogni
 - EVENTA: original embedded Figure 2 extracted from page 3 of the 23Trinitrotoluen team manuscript linked by the official EVENTA 2025 challenge page. The public manuscript is anonymized. Association with this project and the award are supported by the CV; formal author names are not inferred.
 - Figures are reproduced as source assets, without AI generation or content alteration. The original authors retain their rights; source links accompany the website figures.
 - Portrait: the public SEAS staff profile, https://seas-cvn.com/staff/tran-ta-quang-minh-2026. No synthetic portrait is used.
-- Both SEAS entries describe mentored student work. No original project figure is present in either repository. These entries use text rather than an unrelated illustration or a diagram from the FishNet dataset paper.
+- Both SEAS entries describe mentored student work. Their project cards use generated conceptual cover illustrations, not original project figures or measured results.
 - Flood forecasts are described as a prototype, without claims of operational warning capability or measured accuracy. Real-time fish recognition and edge deployment remain project objectives unless project measurements are supplied.
 - Design references supplied in web.md: al-folio, Jon Barron, and academic-homepage. This is an original static implementation inspired by their academic structure, with no template code copied.
+
+## Project cover illustrations
+
+The five Projects cards use conceptual covers generated with the built-in Imagegen tool at the owner's request. These are illustrative artwork, not photographs of completed hardware, deployed systems, measured results, or original paper figures. Full generation prompts are in [project-cover-prompts.md](project-cover-prompts.md).
+
+![Concept illustration of image cards and search connections for event-based image retrieval.](../assets/images/project-covers/eventa.png)
+
+**EVENTA:** AI-generated conceptual illustration
+
+![Concept illustration of smart assistive glasses and visual sensing for accessible mobility.](../assets/images/project-covers/ai-glasses.png)
+
+**AI Assistant Glasses:** AI-generated conceptual illustration
+
+![Concept illustration of a Vietnamese river valley and hydrologic forecasting.](../assets/images/project-covers/seas-flood.png)
+
+**Flood Forecasting for the Long Dai River:** AI-generated conceptual illustration
+
+![Concept illustration of marine fish recognition with a small edge-computing board.](../assets/images/project-covers/seas-fish.png)
+
+**Local Fish Recognition at the Edge:** AI-generated conceptual illustration
+
+![Concept illustration of a water droplet and sensing motifs for the AquaSafe prototype.](../assets/images/project-covers/aquasafe.png)
+
+**AquaSafe:** AI-generated conceptual illustration

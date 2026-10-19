@@ -46,6 +46,13 @@ for filename in PAGES:
     for marker in ('TODO', 'Lorem ipsum', 'Your Name'):
         if marker in html:
             errors.append(f'{filename}: unresolved placeholder {marker}')
+    for removed in ('<footer', 'Original paper figure', 'CV & publication status:'):
+        if removed in html:
+            errors.append(f'{filename}: removed page chrome is still present ({removed})')
+    if filename == 'publications.html' and ('ongoing-title' in html or 'page-note' in html):
+        errors.append('Publications still includes the removed ongoing/status sections')
+    if filename == 'projects.html' and any(marker in html for marker in ('data-filter=', 'id="lifelog"', 'id="surveillance"')):
+        errors.append('Projects still includes removed filters or projects')
 
 for filename, site in documents.items():
     for link in site.links:
@@ -83,6 +90,10 @@ for project in data['projects'] + data['other_projects']:
         errors.append(f'Missing project copy: {project["id"]}')
     if project['category'] == 'mentored' and 'mentor' not in project['role'].lower():
         errors.append(f'Missing mentor attribution: {project["id"]}')
+    if project['category'] != 'research':
+        cover = ROOT / project.get('cover', '')
+        if not cover.is_file() or cover.stat().st_size < 1000 or not project.get('cover_alt'):
+            errors.append(f'Missing project cover: {project["id"]}')
     if project.get('image'):
         if not project.get('figure_source') or not project.get('figure_credit'):
             errors.append(f'Missing figure provenance: {project["id"]}')
